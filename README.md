@@ -16,13 +16,9 @@ To install emotion/styled in your own react projects
 
 ### `npm i @emotion/styled @emotion/core`
 
-to get documentation of this CSS library the link here:
+This project will be using CSS materialize. link to start using this library:
 
-https://emotion.sh/docs/introduction
-
-to install library and use animations for transition:
-
-npm i react-transition-group
-it will be required import things to the actual project
-
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+/>
