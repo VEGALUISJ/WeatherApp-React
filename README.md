@@ -18,7 +18,4 @@ To install emotion/styled in your own react projects
 
 This project will be using CSS materialize. link to start using this library:
 
-<link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-/>
+`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />`
