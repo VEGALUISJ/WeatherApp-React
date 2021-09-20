@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import Error from "./Error";
 
-const Form = () => {
-  const [search, setSearch] = useState({
-    city: "",
-    country: "",
-  });
+const Form = ({ search, setSearch, setConsult }) => {
   const [error, setError] = useState(false);
+
+  //destructuring data
+  const { city, country } = search;
 
   //retriving data from user selection
   const handleChange = (e) => {
@@ -14,9 +14,6 @@ const Form = () => {
       [e.target.name]: e.target.value,
     });
   };
-
-  //destructuring data
-  const { city, country } = search;
 
   //On Submit data
   const handleSubmit = (e) => {
@@ -29,15 +26,14 @@ const Form = () => {
     }
 
     setError(false);
+
+    //Sending to consult validated state
+    setConsult(true);
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      {error ? (
-        <p className="red darken-4 error">
-          Please fill out all fields and try again!
-        </p>
-      ) : null}
+      {error ? <Error message="You must fill all fields." /> : null}
 
       <div className="input-field col s12">
         <input
